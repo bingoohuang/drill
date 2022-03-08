@@ -23,11 +23,9 @@ use crate::actions::{Report, Runnable};
 
 static USER_AGENT: &str = "drill";
 
-#[derive(Clone)]
 pub struct Request {
   name: String,
   url: String,
-  time: f64,
   method: String,
   headers: HashMap<String, String>,
   pub body: Option<String>,
@@ -80,7 +78,6 @@ impl Request {
     Request {
       name: name.to_string(),
       url: url.to_string(),
-      time: 0.0,
       method,
       headers,
       body: body.map(str::to_string),

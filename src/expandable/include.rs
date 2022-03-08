@@ -78,8 +78,6 @@ pub fn expand_from_filepath(parent_path: &str, mut benchmark: &mut Benchmark, ac
 }
 
 mod tests {
-  use super::*;
-
   #[test]
   fn expand_include() {
     let text = "---\nname: Include comment\ninclude: comments.yml";
